@@ -4,10 +4,9 @@ export const Home = () => {
   return (
     <S.Section>
       <S.Container>
-        <div/>
-          <S.Title>21 days of code</S.Title>
-          <S.Button to="/list">Go to list</S.Button>
-        <div/>
+        <S.Title>21 days of code</S.Title>
+        <S.Subtitle>Projects by Daniel Mello. Challenge by Rocketseat.</S.Subtitle>
+        <S.Button to="/list">Go to projects</S.Button>
       </S.Container>
     </S.Section>
   )

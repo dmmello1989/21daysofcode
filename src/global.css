@@ -1,7 +1,12 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-    v2.0 | 20110126
-    License: none (public domain)
-*/
+:root {
+	--purple: #6F48C9;
+	--terracotta: #C94862;
+	--green: #A2C948;
+	--cyan: #48C9AF;
+	--white: #FFFFFF;
+	--font1: #4a4a4a;
+	--font2: #999999;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -32,7 +37,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	color: #ffffff;
-	background-color: #6F48C9;
+	background-color: var(--primary);
 }
 ol, ul {
 	list-style: none;
@@ -48,4 +53,7 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+a {
+	text-decoration: none;
 }

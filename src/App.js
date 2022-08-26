@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Router } from "./router";
-import "./reset.css";
+import "./global.css";
 
 function App() {
   return (
