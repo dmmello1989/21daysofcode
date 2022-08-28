@@ -1,4 +1,5 @@
 import { Outlet, useNavigate } from "react-router-dom";
+import { Header } from "../../components/Header";
 import * as S from "./styles";
 
 const list = [
@@ -92,25 +93,29 @@ export const ProjectsList = () => {
   const navigate = useNavigate();
 
   return (
-    <S.Section>
-      <S.Container>
-        <S.List>
-          {list.map((item, index) => (
-            <S.Item key={index} onClick={() => navigate(`/projects/${item.slug}`)}>
-              <S.ItemInner>
-                <S.ItemFront>
-                  <S.Number>{item.number}</S.Number>
-                  
-                </S.ItemFront>
-                <S.ItemBack>
-                  <S.Image>{item.image}</S.Image>
-                </S.ItemBack>
-              </S.ItemInner>
-              <S.Title>{item.title}</S.Title>
-            </S.Item>
-          ))}
-        </S.List>
-      </S.Container>
-    </S.Section>
+    <>
+      <Header returnLink="/" />
+      <S.Section>
+        <S.Container>
+          <S.List>
+            {list.map((item, index) => (
+              <S.Item key={index} onClick={() => navigate(`/projects/${item.slug}`)}>
+                <S.ItemInner>
+                  <S.ItemFront>
+                    <S.Number>{item.number}</S.Number>
+                    
+                  </S.ItemFront>
+                  <S.ItemBack>
+                    <S.Image>{item.image}</S.Image>
+                  </S.ItemBack>
+                </S.ItemInner>
+                <S.Title>{item.title}</S.Title>
+              </S.Item>
+            ))}
+          </S.List>
+        </S.Container>
+      </S.Section>
+    </>
+    
   )
 }

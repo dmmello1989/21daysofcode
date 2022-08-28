@@ -1,10 +1,10 @@
 import * as S from "./styles";
 
-export const Header = () => {
+export const Header = ({ returnLink }) => {
   return(
     <S.Header>
       <S.Container>
-        <S.Return to="/projects">
+        <S.Return to={returnLink}>
           {`<< Return`} 
         </S.Return>
         <div />

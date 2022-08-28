@@ -1,4 +1,5 @@
 import { DetailsHeader } from "../../components/DetailsHeader";
+import { Header } from "../../components/Header";
 import { ImageFrame } from "../../components/ImageFrame";
 import Img from "../../images/repo.png"
 
@@ -7,6 +8,7 @@ import * as S from "./styles";
 export const Repo = () => {
   return (
     <>
+      <Header returnLink="/projects" />
       <DetailsHeader
         day="1"
         slug="01-Repo"

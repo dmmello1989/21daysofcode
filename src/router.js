@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { Home } from "./scenes/Home";
 import { ProjectsList } from "./scenes/ProjectsList";
 import { Repo } from "./scenes/01-Repo";
+import { HelloWorld } from "./scenes/02-HelloWorld";
 
 const HOME_PATH = "/";
 const PROJECTS_PATH = "/projects";
@@ -14,7 +15,7 @@ export const Router = () => {
 
       {/* Projects Routes */}
       <Route path={`${PROJECTS_PATH}/01-repo`} element={<Repo />} />
-      <Route path={`${PROJECTS_PATH}/02-hello-world`} />
+      <Route path={`${PROJECTS_PATH}/02-hello-world`} element={<HelloWorld />} />
       <Route path={`${PROJECTS_PATH}/03-animated-button`} />
       <Route path={`${PROJECTS_PATH}/04-calculator`} />
       <Route path={`${PROJECTS_PATH}/05-404-page`} />

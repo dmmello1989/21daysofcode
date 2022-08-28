@@ -9,6 +9,7 @@
   --clr-light: #fff;
   --clr-dark: #303030;
   --clr-accent: #16e0bd;
+  --clr-accentMono: #0B6C5B;
   --clr-complimentary: #E01639;
 
   --fs-h1: 42px;
@@ -44,8 +45,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 16px;
-	font-family: "Source Sans Pro", sans-serif;
+	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
