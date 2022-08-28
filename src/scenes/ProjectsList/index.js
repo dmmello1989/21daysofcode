@@ -1,3 +1,4 @@
+import { Outlet, useNavigate } from "react-router-dom";
 import * as S from "./styles";
 
 const list = [
@@ -5,95 +6,97 @@ const list = [
     number: "01",
     image: "",
     title: "Repo",
-    link: "/"
+    slug: "01-repo"
   },
   {
     number: "02",
     image: "",
     title: "Hello World",
-    link: "/"
+    slug: "02-hello-world"
   },
   {
     number: "03",
     image: "",
     title: "Animated Button",
-    link: "/"
+    slug: "03-animated-button"
   },
   {
     number: "04",
     image: "",
     title: "Calculator",
-    link: "/"
+    slug: "04-calculator"
   },
   {
     number: "05",
     image: "",
     title: "404 Page",
-    link: "/"
+    slug: "05-404-page"
   },
   {
     number: "06",
     image: "",
     title: "Glassmorphism",
-    link: "/"
+    slug: "06-glassmorphism`"
   },
   {
     number: "07",
     image: "",
     title: "Counter",
-    link: "/"
+    slug: "07-counter"
   },
   {
     number: "08",
     image: "",
     title: "Dark/Light Mode",
-    link: "/"
+    slug: "08-dark-light-mode"
   },
   {
     number: "09",
     image: "",
     title: "Animated Loading",
-    link: "/"
+    slug: "09-animated-loading"
   },
   {
     number: "10",
     image: "",
     title: "Particle.js",
-    link: "/"
+    slug: "10-particle-js"
   },
   {
     number: "11",
     image: "",
     title: "Login Form",
-    link: "/"
+    slug: "11-login-form"
   },
   {
     number: "12",
     image: "",
     title: "Image Gallery",
-    link: "/"
+    slug: "12-image-gallery"
   },
   {
     number: "13",
     image: "",
     title: "Responsive Menu",
-    link: "/"
+    slug: "13-responsive-menu"
   },
   {
     number: "14",
     image: "",
     title: "Quiz",
-    link: "/"
+    slug: "14-quiz"
   },
 ]
 
-export const List = () => {
+export const ProjectsList = () => {
+  const navigate = useNavigate();
+
   return (
     <S.Section>
       <S.Container>
         <S.List>
           {list.map((item, index) => (
-            <S.Item key={index}>
+            <S.Item key={index} onClick={() => navigate(`/projects/${item.slug}`)}>
               <S.ItemInner>
                 <S.ItemFront>
                   <S.Number>{item.number}</S.Number>

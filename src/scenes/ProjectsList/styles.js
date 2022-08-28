@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 export const Section = styled.section`
   padding: 60px 0;
-  background-color: var(--purple);
 `;
 
 export const Container = styled.div`
@@ -21,6 +20,10 @@ export const List = styled.ul`
   align-items: center;
 `;
 
+export const ItemLink = styled(Link)`
+  
+`;
+
 export const ItemInner = styled.div`
   position: relative;
   width: 100%;
@@ -34,9 +37,10 @@ export const Title = styled.span`
   bottom: -64px;
   left: 50%;
   font-size: 2rem;
-  font-weight: 700;
-  color: var(--white);
+  color: var(--clr-light);
+  font-family: var(--ff-secondary);
   transform: translateX(-50%);
+  transition: all 0.4s;
   white-space: nowrap;
 `;
 
@@ -56,7 +60,7 @@ export const Item = styled.li`
   &:hover ${Title} {
     bottom: -52px;
     font-size: 2.5rem;
-    transition: all 0.4s;
+
   }
 `;
 
@@ -76,19 +80,20 @@ export const ItemBack = styled(ItemFront)`
 
 export const Number = styled.div`
   position: absolute;
-  bottom: -48px;
+  bottom: 26px;
   right: -16px;
   width: 200px;
-  text-align: center;
-  font-family: 'Russo One', sans-serif;
   font-size: 12rem;
-  color: var(--cyan);
-  
+  line-height: 140px;
+  text-align: center;
+  color: var(--clr-accent);
+  font-weight: var(--fw-black);
 `;
-
 
 export const Image = styled.div`
   width: 100%;
   height: 100%;
-  background: orange;
+  border-radius: 16px;
+  background: #E01639;
+  border: 2px solid rgba(0,0,0,0.7);
 `;
