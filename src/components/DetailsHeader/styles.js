@@ -28,6 +28,7 @@ export const ProjectTitle = styled.div`
 `;
 
 export const GithubLink = styled.div`
+  font-size: 1rem;
   font-family: var(--ff-secondary);
 
   > a {

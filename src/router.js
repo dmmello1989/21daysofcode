@@ -1,8 +1,9 @@
 import { Routes, Route } from "react-router-dom";
-import { Home } from "./scenes/Home";
-import { ProjectsList } from "./scenes/ProjectsList";
-import { Repo } from "./scenes/01-Repo";
-import { HelloWorld } from "./scenes/02-HelloWorld";
+import { Home } from "./pages/Home";
+// import { Repo } from "./pages";
+import { ProjectsList } from "./pages/ProjectsList";
+import { ProjectDetails } from "./pages/ProjectDetails";
+import { HelloWorld } from "./pages/scenes/02-HelloWorld";
 
 const HOME_PATH = "/";
 const PROJECTS_PATH = "/projects";
@@ -11,10 +12,15 @@ export const Router = () => {
   return (
     <Routes>
       <Route path={HOME_PATH} element={<Home />} />
-      <Route path={PROJECTS_PATH} element={<ProjectsList />} />
+      <Route  element={<ProjectsList />} />
+
+      <Route path={PROJECTS_PATH} >
+        <Route index element={<ProjectsList />} />
+        <Route path=":slug" element={<ProjectDetails />} />
+      </Route>
 
       {/* Projects Routes */}
-      <Route path={`${PROJECTS_PATH}/01-repo`} element={<Repo />} />
+      {/* <Route path={`${PROJECTS_PATH}/01-repo`} element={<Repo />} /> */}
       <Route path={`${PROJECTS_PATH}/02-hello-world`} element={<HelloWorld />} />
       <Route path={`${PROJECTS_PATH}/03-animated-button`} />
       <Route path={`${PROJECTS_PATH}/04-calculator`} />

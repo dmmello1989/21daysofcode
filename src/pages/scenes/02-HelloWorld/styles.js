@@ -30,7 +30,6 @@ export const Section = styled.div`
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 300px;
   margin: 0 auto;
   padding: 64px;
 `;
@@ -38,9 +37,9 @@ export const Container = styled.div`
 export const Device = styled.div`
   position: relative;
   width: 300px;
-  height: 280px;
+  height: 300px;
   margin: 0 auto;
-  padding: 16px 16px 16px 28px;
+  padding: 16px 16px 16px 12px;
   border-radius: 8px;
   background-color: #0A6656;
   box-shadow: inset -9px -9px 0px 0px #074338;
@@ -50,7 +49,7 @@ export const Device = styled.div`
     content: '';
     position: absolute;
     top: -8px;
-    left: 8px;
+    left: -8px;
     width: 100%;
     height: 100%;
     border-radius: 8px;
@@ -85,7 +84,9 @@ export const Text = styled.p`
 export const BottomWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-top: 24px;
+  margin-top: auto;
+  padding-top: 40px;
+  padding-right: 16px;
 `;
 
 export const Speaker = styled.div`
@@ -123,7 +124,7 @@ export const Button = styled.div`
     height:11px;
     position: absolute;
     margin: 3px 0 0 3px;
-    border: solid 1px #444444;
+    border: solid 1px #777777;
     border-radius: 5px;
     background: linear-gradient(#888888, #666666);
     cursor: pointer;
