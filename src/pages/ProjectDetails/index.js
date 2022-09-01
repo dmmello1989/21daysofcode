@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import { Repo } from "../scenes/01-Repo";
 import { HelloWorld } from "../scenes/02-HelloWorld";
 import * as S from "./styles";
@@ -7,7 +8,7 @@ const list = [
     number: "01",
     image: "",
     title: "Repo",
-    slug: "01-repo"
+    slug: "01-repo",
   },
   {
     number: "02",
@@ -90,11 +91,13 @@ const list = [
 ];
 
 export const ProjectDetails = ({ content }) => {
+  console.log(content)
   return (
     <>
       {/* {!content.slug && <Empty />} */}
       {content.slug === "01-Repo" && <Repo {...this.props} />}
       {content.slug === "02-HelloWorld" && <HelloWorld {...this.props} />}
+      <Outlet />
     </>
   )
 }

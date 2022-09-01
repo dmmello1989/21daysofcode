@@ -1,9 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
-// import { Repo } from "./pages";
 import { ProjectsList } from "./pages/ProjectsList";
 import { ProjectDetails } from "./pages/ProjectDetails";
+
+import { Repo } from "./pages/scenes/01-Repo";
 import { HelloWorld } from "./pages/scenes/02-HelloWorld";
+import { AnimatedButton } from "./pages/scenes/03-AnimatedButton";
 
 const HOME_PATH = "/";
 const PROJECTS_PATH = "/projects";
@@ -20,9 +22,9 @@ export const Router = () => {
       </Route>
 
       {/* Projects Routes */}
-      {/* <Route path={`${PROJECTS_PATH}/01-repo`} element={<Repo />} /> */}
+      <Route path={`${PROJECTS_PATH}/01-repo`} element={<Repo />} />
       <Route path={`${PROJECTS_PATH}/02-hello-world`} element={<HelloWorld />} />
-      <Route path={`${PROJECTS_PATH}/03-animated-button`} />
+      <Route path={`${PROJECTS_PATH}/03-animated-button`} element={<AnimatedButton />} />
       <Route path={`${PROJECTS_PATH}/04-calculator`} />
       <Route path={`${PROJECTS_PATH}/05-404-page`} />
       <Route path={`${PROJECTS_PATH}/06-glassmorphism`} />
