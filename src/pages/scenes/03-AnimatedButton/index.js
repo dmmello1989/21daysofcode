@@ -1,15 +1,13 @@
 import { useState } from "react";
 import { DetailsHeader } from "../../../components/DetailsHeader";
-import { Header } from "../../../components/Header";
 import { ImageFrame } from "../../../components/ImageFrame";
+import { Header } from "../../../components/Header";
 import Img from "../../../images/repo.png"
 
 import * as S from "./styles";
 
 export const AnimatedButton = () => {
   const [isActive, setIsActive] = useState(false);
-
-  console.log(isActive)
 
   return (
     <>

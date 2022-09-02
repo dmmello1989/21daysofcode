@@ -6,6 +6,7 @@ import { ProjectDetails } from "./pages/ProjectDetails";
 import { Repo } from "./pages/scenes/01-Repo";
 import { HelloWorld } from "./pages/scenes/02-HelloWorld";
 import { AnimatedButton } from "./pages/scenes/03-AnimatedButton";
+import { Calculator } from "./pages/scenes/04-Calculator";
 
 const HOME_PATH = "/";
 const PROJECTS_PATH = "/projects";
@@ -25,7 +26,7 @@ export const Router = () => {
       <Route path={`${PROJECTS_PATH}/01-repo`} element={<Repo />} />
       <Route path={`${PROJECTS_PATH}/02-hello-world`} element={<HelloWorld />} />
       <Route path={`${PROJECTS_PATH}/03-animated-button`} element={<AnimatedButton />} />
-      <Route path={`${PROJECTS_PATH}/04-calculator`} />
+      <Route path={`${PROJECTS_PATH}/04-calculator`} element={<Calculator />} />
       <Route path={`${PROJECTS_PATH}/05-404-page`} />
       <Route path={`${PROJECTS_PATH}/06-glassmorphism`} />
       <Route path={`${PROJECTS_PATH}/07-counter`} />
