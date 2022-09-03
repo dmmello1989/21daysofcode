@@ -110,6 +110,10 @@ export const Button = styled.button`
   border-radius: 8px;
   border: 3px solid #000000;
   cursor: pointer;
+
+  &:hover {
+    background-color: darkgreen;
+  }
   
   ${props => props.bgColor === "green" && `
     background-color: var(--bg-calc-green);
