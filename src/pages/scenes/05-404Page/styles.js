@@ -1,88 +1,82 @@
+import { Link } from "react-router-dom";
 import styled, { keyframes, css } from "styled-components";
-
-const onClick = keyframes`
-  0% {
-  }
-  100% {
-  }
-`;
-
-const animationButton = css`
-  animation: ${onClick} 2s ease-in-out;
-`;
-
+import BgDesktop from "../../../images/bg-404-page.gif";
 
 export const Section = styled.div`
-  
+  position: relative;
+  height: 100vh;
+  background: url(${BgDesktop}) center/cover no-repeat;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.8) 25%,
+      rgba(0, 0, 0, 0) 90%
+      /* rgba(0, 0, 0, 0.8), */
+      /* rgba(0, 0, 0, 0) 60%, */
+      /* rgba(0, 0, 0, 0.8) 100% */
+    );
+    z-index: 3;
+  }
 `;
 
 export const Container = styled.div`
   width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 64px;
-  /* background-color: #ffffff; */
 `;
 
-export const NeuromorphicButton = styled.button`
+export const Column = styled.div`
   position: relative;
-  display: block;
-  padding: 32px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 132px 0 64px;
+  text-align: center;
+  z-index: 5;
+`;
+
+export const Number404 = styled.div`
+  font-size: 21rem;
+  font-weight: 900;
+  line-height: 16rem;
+  font-family: var(--ff-primary);
+  color: rgba(0,0,0,0.7);
+`;
+
+export const Title = styled.h1`
+  margin: 32px 0px 24px;
   font-size: 3rem;
+  font-weight: 700;
+  color: var(--clr-complimentary);
+`;
+
+export const Text = styled.div`
+  font-size: 1.125rem;
+  margin-bottom: 16px;
+`;
+
+export const LinksWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 432px;
+`;
+
+export const RedirectLink = styled(Link)`
+  font-size: 1.5rem;
   color: var(--clr-accent);
-  font-weight: var(--fw-bold);
-  font-family: var(--ff-secondary);
-  margin: auto;
-  border: 2px solid var(--clr-accent);
-  background-color: #1B1B1B;
-  transition:all 1s;
-  cursor: pointer;
-
-  &:after {
-    content:" ";
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    margin:auto;
-    display:inline-block;
-    width:100%;
-    height:100%;
-    border:2px solid rgba(0,0,0,0);
-    transition:all 0.8s;
-  }
-
-  &:before {
-    content:" ";
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    margin:auto;
-    display:inline-block;
-    width:100%;
-    height:100%;
-    border:2px solid rgba(0,0,0,0);
-    transition:all 0.8s;
-  }
+  transition: color 0.4s;
 
   &:hover {
-    color: var(--clr-complimentary);
-    border:2px solid var(--clr-complimentary);
+    color: var(--clr-accentMono);
   }
-
-  &:hover:after{  
-    border:2px solid var(--clr-complimentary);
-    width: calc(100% - 20px);
-    height: calc(100% + 20px); 
-  }
-
-  &:hover:before{  
-    border:2px solid var(--clr-complimentary);
-    width: calc(100% - 35px);
-    height: calc(100% + 35px); 
-  }
-
-  ${props => props.isClick && animationButton};
 `;

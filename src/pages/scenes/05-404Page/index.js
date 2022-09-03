@@ -6,9 +6,26 @@ import Img from "../../../images/repo.png"
 
 import * as S from "./styles";
 
-export const NotFound404 = () => {
-  const [isActive, setIsActive] = useState(false);
+const links = [
+  {
+    text: "Home",
+    link: "/"
+  },
+  {
+    text: "Projects List",
+    link: "/projects"
+  },
+  {
+    text: "About",
+    link: "#"
+  },
+  {
+    text: "Contact",
+    link: "#"
+  }
+]
 
+export const NotFound404 = () => {
   return (
     <>
       <Header returnLink="/projects" />
@@ -19,7 +36,18 @@ export const NotFound404 = () => {
       />
       <S.Section>
         <S.Container>
-          404 Oops!
+          <S.Column>
+            <S.Number404>404</S.Number404>
+            <S.Title>Page not found!</S.Title>
+            <S.Text>Don't worry, here are some useful links to get you back on track.</S.Text>
+            <S.LinksWrapper>
+              {links.map((link, index) => 
+                <S.RedirectLink key={index} to={link.link}>
+                  {link.text}
+                </S.RedirectLink>
+              )}
+            </S.LinksWrapper>
+          </S.Column>
         </S.Container>
       </S.Section>
     </>

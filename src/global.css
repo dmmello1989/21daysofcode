@@ -1,6 +1,7 @@
 :root {
 	--ff-primary: 'Source Sans Pro', sans-serif;
   --ff-secondary: 'Source Code Pro', monospace;
+  --ff-tertiary: 'Silkscreen', sans-serif;
 
   --fw-reg: 400;
   --fw-bold: 700;
