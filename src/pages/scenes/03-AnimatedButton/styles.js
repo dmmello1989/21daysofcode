@@ -1,16 +1,4 @@
-import styled, { keyframes, css } from "styled-components";
-
-const onClick = keyframes`
-  0% {
-  }
-  100% {
-  }
-`;
-
-const animationButton = css`
-  animation: ${onClick} 2s ease-in-out;
-`;
-
+import styled from "styled-components";
 
 export const Section = styled.div`
   
@@ -23,66 +11,68 @@ export const Container = styled.div`
   /* background-color: #ffffff; */
 `;
 
-export const NeuromorphicButton = styled.button`
+export const Button = styled.button`
   position: relative;
   display: block;
-  padding: 32px 64px;
-  font-size: 3rem;
-  color: var(--clr-accent);
-  font-weight: var(--fw-bold);
-  font-family: var(--ff-secondary);
+  width: 360px;
+  height: 100px;
   margin: auto;
-  border: 2px solid var(--clr-accent);
-  background-color: #1B1B1B;
-  transition:all 1s;
+  padding: 16px 32px;
+  border-radius: 70px;
+  border: 2px solid var(--clr-light);
+  background-color: transparent;
+  transition: all 0.4s;
   cursor: pointer;
 
   &:after {
     content:" ";
     position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    margin:auto;
-    display:inline-block;
+    top: -8px;
+    left: -16px;
     width:100%;
     height:100%;
+    border-radius: 70px;
+    background-color: var(--clr-accent);
     border:2px solid rgba(0,0,0,0);
-    transition:all 0.8s;
-  }
-
-  &:before {
-    content:" ";
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    margin:auto;
-    display:inline-block;
-    width:100%;
-    height:100%;
-    border:2px solid rgba(0,0,0,0);
-    transition:all 0.8s;
-  }
-
-  &:hover {
-    color: var(--clr-complimentary);
-    border:2px solid var(--clr-complimentary);
+    transition: all 0.4s;
   }
 
   &:hover:after{  
-    border:2px solid var(--clr-complimentary);
-    width: calc(100% - 20px);
-    height: calc(100% + 20px); 
+    transform: translate(16px, 8px);
   }
 
-  &:hover:before{  
-    border:2px solid var(--clr-complimentary);
-    width: calc(100% - 35px);
-    height: calc(100% + 35px); 
+  &:active {
+    border-color: rgba(255,255,255,0.8);
   }
 
-  ${props => props.isClick && animationButton};
+  &:active:after {
+    background-color: var(--clr-accentMono);
+  }
+
+  ${props => props.isClicked && `
+    &:after {
+      top: 0;
+      left: 0;
+      background: var(--clr-complimentary);
+    }
+    &:hover:after{  
+      transform: none;
+    }
+    &:active:after {
+      background-color: var(--clr-complimentaryMono);
+    }
+  `};
+`;
+
+export const ButtonText = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  font-size: 3rem;
+  color: var(--clr-dark);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-secondary);
+  transform: translate(-50%, -50%);
+  z-index: 5;
 `;

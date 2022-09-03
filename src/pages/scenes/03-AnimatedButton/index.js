@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { DetailsHeader } from "../../../components/DetailsHeader";
-import { ImageFrame } from "../../../components/ImageFrame";
 import { Header } from "../../../components/Header";
-import Img from "../../../images/repo.png"
 
 import * as S from "./styles";
 
 export const AnimatedButton = () => {
-  const [isActive, setIsActive] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
   return (
     <>
@@ -19,7 +17,9 @@ export const AnimatedButton = () => {
       />
       <S.Section>
         <S.Container>
-          <S.NeuromorphicButton isClick={isActive} onClick={() => setIsActive(!isActive)}>Click me</S.NeuromorphicButton>
+          <S.Button isClicked={isClicked} onClick={() => setIsClicked(!isClicked)}>
+            <S.ButtonText>Click me!</S.ButtonText>
+          </S.Button>
         </S.Container>
       </S.Section>
     </>
