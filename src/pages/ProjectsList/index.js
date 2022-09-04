@@ -37,7 +37,7 @@ const list = [
     number: "06",
     image: "",
     title: "Glassmorphism",
-    slug: "06-glassmorphism`"
+    slug: "06-glassmorphism"
   },
   {
     number: "07",

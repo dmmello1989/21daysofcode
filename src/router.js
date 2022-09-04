@@ -8,6 +8,7 @@ import { HelloWorld } from "./pages/scenes/02-HelloWorld";
 import { AnimatedButton } from "./pages/scenes/03-AnimatedButton";
 import { Calculator } from "./pages/scenes/04-Calculator";
 import { NotFound404 } from "./pages/scenes/05-404Page";
+import { Glassmorphism } from "./pages/scenes/06-Glassmorphism";
 
 const HOME_PATH = "/";
 const PROJECTS_PATH = "/projects";
@@ -29,7 +30,7 @@ export const Router = () => {
       <Route path={`${PROJECTS_PATH}/03-animated-button`} element={<AnimatedButton />} />
       <Route path={`${PROJECTS_PATH}/04-calculator`} element={<Calculator />} />
       <Route path={`${PROJECTS_PATH}/05-404-page`} element={<NotFound404 />} />
-      <Route path={`${PROJECTS_PATH}/06-glassmorphism`} />
+      <Route path={`${PROJECTS_PATH}/06-glassmorphism`} element={<Glassmorphism />} />
       <Route path={`${PROJECTS_PATH}/07-counter`} />
       <Route path={`${PROJECTS_PATH}/08-dark-light-mode`} />
       <Route path={`${PROJECTS_PATH}/09-animated-loading`} />
