@@ -5,10 +5,8 @@ export const Section = styled.div`
 `;
 
 export const Container = styled.div`
-  display: flex;
   width: 100%;
-  height: calc(100vh - 184px);
-  margin: auto;
+  margin: 0 auto;
   padding: 64px;
   /* background-color: #ffffff; */
 `;
@@ -21,8 +19,7 @@ export const Button = styled.button`
   margin: auto;
   padding: 16px 32px;
   border-radius: 70px;
-  border: 2px solid rgba(0,0,0,0.1);
-  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--clr-light);
   background-color: transparent;
   transition: all 0.4s;
   cursor: pointer;
@@ -36,6 +33,7 @@ export const Button = styled.button`
     height:100%;
     border-radius: 70px;
     background-color: var(--clr-accent);
+    border:2px solid rgba(0,0,0,0);
     transition: all 0.4s;
   }
 
@@ -44,10 +42,11 @@ export const Button = styled.button`
   }
 
   &:active {
+    border-color: rgba(255,255,255,0.8);
   }
 
   &:active:after {
-    box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: var(--clr-accentMono);
   }
 
   ${props => props.isClicked && `

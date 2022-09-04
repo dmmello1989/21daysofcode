@@ -46,24 +46,24 @@ export const Calculator = () => {
                 {[7,8,9].map((number,index) => (
                   <S.NumberButton key={index} bgColor={bgColor}>{number}</S.NumberButton>
                 ))}
-                <S.OperatorButton>/</S.OperatorButton>
+                <S.OperatorButton bgColor={bgColor}>/</S.OperatorButton>
               </S.Row>
               <S.Row>
                 {[4,5,6].map((number,index) => (
                   <S.NumberButton key={index} bgColor={bgColor}>{number}</S.NumberButton>
                 ))}
-                <S.OperatorButton>*</S.OperatorButton>
+                <S.OperatorButton bgColor={bgColor}>*</S.OperatorButton>
               </S.Row>
               <S.Row>
                 {[1,2,3].map((number,index) => (
                   <S.NumberButton key={index} bgColor={bgColor}>{number}</S.NumberButton>
                 ))}
-                <S.OperatorButton>-</S.OperatorButton>
+                <S.OperatorButton bgColor={bgColor}>-</S.OperatorButton>
               </S.Row>
               <S.Row>
                 <S.ClearButton>C</S.ClearButton>
                 <S.NumberButton bgColor={bgColor}>0</S.NumberButton>
-                <S.OperatorButton isBigger onClick={() => handleOperation()}>=</S.OperatorButton>
+                <S.OperatorButton isBigger bgColor={bgColor} onClick={() => handleOperation()}>=</S.OperatorButton>
               </S.Row>
             </S.Body>
           </S.Box>

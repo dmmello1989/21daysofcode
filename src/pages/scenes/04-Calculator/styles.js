@@ -135,7 +135,7 @@ export const OperatorButton = styled(Button)`
   `};
 
   ${props => props.bgColor && `
-
+    background-color: var(--bg-calc-blue);
   `};
 `;
 
