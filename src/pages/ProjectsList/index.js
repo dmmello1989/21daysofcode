@@ -87,6 +87,48 @@ const list = [
     title: "Quiz",
     slug: "14-quiz"
   },
+  {
+    number: "15",
+    image: "",
+    title: "E-Commerce",
+    slug: "15-lp-e-commerce"
+  },
+  {
+    number: "16",
+    image: "",
+    title: "Public API",
+    slug: "16-public-api"
+  },
+  {
+    number: "17",
+    image: "",
+    title: "Keyboard Events",
+    slug: "17-keyvoard-events"
+  },
+  {
+    number: "18",
+    image: "",
+    title: "Password Generator",
+    slug: "18-password-generator"
+  },
+  {
+    number: "19",
+    image: "",
+    title: "Unsplash Gallery",
+    slug: "19-unsplash-gallery"
+  },
+  {
+    number: "20",
+    image: "",
+    title: "Emoji Picker",
+    slug: "20-emoji-picker"
+  },
+  {
+    number: "21",
+    image: "",
+    title: "Portfolio",
+    slug: "21-portfolio"
+  },
 ]
 
 export const ProjectsList = () => {

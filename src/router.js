@@ -9,6 +9,8 @@ import { AnimatedButton } from "./pages/scenes/03-AnimatedButton";
 import { Calculator } from "./pages/scenes/04-Calculator";
 import { NotFound404 } from "./pages/scenes/05-404Page";
 import { Glassmorphism } from "./pages/scenes/06-Glassmorphism";
+import { AnimatedLoading } from "./pages/scenes/09-AnimatedLoading";
+import { Counter } from "./pages/scenes/07-Counter";
 
 const HOME_PATH = "/";
 const PROJECTS_PATH = "/projects";
@@ -31,14 +33,21 @@ export const Router = () => {
       <Route path={`${PROJECTS_PATH}/04-calculator`} element={<Calculator />} />
       <Route path={`${PROJECTS_PATH}/05-404-page`} element={<NotFound404 />} />
       <Route path={`${PROJECTS_PATH}/06-glassmorphism`} element={<Glassmorphism />} />
-      <Route path={`${PROJECTS_PATH}/07-counter`} />
-      <Route path={`${PROJECTS_PATH}/08-dark-light-mode`} />
-      <Route path={`${PROJECTS_PATH}/09-animated-loading`} />
-      <Route path={`${PROJECTS_PATH}/10-particle-js`} />
-      <Route path={`${PROJECTS_PATH}/11-login-form`} />
-      <Route path={`${PROJECTS_PATH}/12-image-gallery`} />
-      <Route path={`${PROJECTS_PATH}/13-responsive-menu`} />
-      <Route path={`${PROJECTS_PATH}/14-quiz`} />
+      <Route path={`${PROJECTS_PATH}/07-counter`} element={<Counter />} />
+      <Route path={`${PROJECTS_PATH}/08-dark-light-mode`} element={<Counter />} />
+      <Route path={`${PROJECTS_PATH}/09-animated-loading`} element={<AnimatedLoading />} />
+      <Route path={`${PROJECTS_PATH}/10-particle-js`} element={<Counter />} />
+      <Route path={`${PROJECTS_PATH}/11-login-form`} element={<Counter />} />
+      <Route path={`${PROJECTS_PATH}/12-image-gallery`} element={<Counter />} />
+      <Route path={`${PROJECTS_PATH}/13-responsive-menu`} element={<Counter />} />
+      <Route path={`${PROJECTS_PATH}/14-quiz`} element={<Counter />} />
+      <Route path={`${PROJECTS_PATH}/15-lp-e-commerce`} element={<Counter />} />
+      <Route path={`${PROJECTS_PATH}/16-lp-public-api`} element={<Counter />} />
+      <Route path={`${PROJECTS_PATH}/17-keyboard-events`} element={<Counter />} />
+      <Route path={`${PROJECTS_PATH}/18-password-generator`} element={<Counter />} />
+      <Route path={`${PROJECTS_PATH}/19-lp-unsplash-gallery`} element={<Counter />} />
+      <Route path={`${PROJECTS_PATH}/20-emoji-picker`} element={<Counter />} />
+      <Route path={`${PROJECTS_PATH}/21-portfolio`} element={<Counter />} />
     </Routes>
   )
 };

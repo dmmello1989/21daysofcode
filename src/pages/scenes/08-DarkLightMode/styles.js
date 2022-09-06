@@ -35,7 +35,7 @@ export const Button = styled.button`
     height:100%;
     border-radius: 70px;
     background-color: var(--clr-accent);
-    transition: all 0.3s;
+    transition: all 0.4s;
   }
 
   &:hover:after{  

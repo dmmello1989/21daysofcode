@@ -4,16 +4,16 @@ import { Header } from "../../../components/Header";
 
 import * as S from "./styles";
 
-export const Counter = () => {
+export const DarkLightMode = () => {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
     <>
       <Header returnLink="/projects" />
       <DetailsHeader
-        day="7"
-        slug="07-Counter"
-        projectTitle="Counter"
+        day="8"
+        slug="08-DarkLightMode"
+        projectTitle="Dark/Light Mode"
       />
       <S.Section>
         <S.Container>
