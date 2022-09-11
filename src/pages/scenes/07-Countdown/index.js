@@ -103,6 +103,7 @@ export const Countdown = ({ dateProps }) => {
           </S.Column>
           <S.Column>
             <S.Image src={AssetCountdown} alt="Two builders building a house" />
+            <S.ImageLabel>Designed by <S.Link href="http://www.freepik.com" target="__blank">macrovector</S.Link></S.ImageLabel>
           </S.Column>
         </S.Container>
       </S.Section>

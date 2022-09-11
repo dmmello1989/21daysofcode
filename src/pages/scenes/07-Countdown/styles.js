@@ -144,3 +144,14 @@ export const LabelEnd = styled.span`
 export const Image = styled.img`
   width: 450px;
 `;
+
+export const ImageLabel = styled.span`
+  font-size: 0.75rem;
+  color: var(--clr-accent);
+  color: var(--bg-calc-blue);
+`;
+
+export const Link = styled.a`
+  font-weight: 700;
+  color: var(--bg-calc-blue);
+`;
