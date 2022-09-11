@@ -1,7 +1,6 @@
 import { DetailsHeader } from "../../../components/DetailsHeader";
-import { Header } from "../../../components/Header";
 import { ImageFrame } from "../../../components/ImageFrame";
-import Img from "../../../images/repo.png"
+import { Header } from "../../../components/Header";
 
 import * as S from "./styles";
 

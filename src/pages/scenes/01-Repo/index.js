@@ -1,7 +1,7 @@
 import { DetailsHeader } from "../../../components/DetailsHeader";
 import { Header } from "../../../components/Header";
 import { ImageFrame } from "../../../components/ImageFrame";
-import Img from "../../../images/repo.png"
+import Img from "../../../images/01-repo.png"
 
 import * as S from "./styles";
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { DetailsHeader } from "../../../components/DetailsHeader";
 import { Header } from "../../../components/Header";
+import AssetCountdown from "../../../images/07-asset-countdown.svg";
 
 import * as S from "./styles";
 
@@ -72,54 +73,39 @@ export const Counter = ({ dateProps }) => {
         slug="07-Counter"
         projectTitle="Counter"
       />
-      <S.Box>
-        {/* <MediaQuery query="(max-width: 1199px)">
-          <BoxNumber>
-            <Number>
-              {nu_hors}
-              <Label diff={true}>:</Label>
-            </Number>
-            <Text>h</Text>
-          </BoxNumber>
-          <BoxNumber>
-            <Number>
-              {nu_minu}
-              <Label diff={true}>:</Label>
-            </Number>
-            <Text>m</Text>
-          </BoxNumber>
-          <BoxNumber>
-            <Number>
-              {nu_secs}
-            </Number>
-            <Text>s</Text>
-          </BoxNumber>
-        </MediaQuery> */}
-
-        {/* <MediaQuery query="(min-width: 1200px)"> */}
-          <S.BoxNumber>
-            <S.Number>
-              {time.nu_hors}
-              <S.Label diff={true}>:</S.Label>
-            </S.Number>
-            <S.Text>hours</S.Text>
-          </S.BoxNumber>
-          <S.BoxNumber>
-            <S.Number>
-              {time.nu_minu}
-              <S.Label diff={true}>:</S.Label>
-            </S.Number>
-            <S.Text>min</S.Text>
-          </S.BoxNumber>
-          <S.BoxNumber>
-            <S.Number>
-              {time.nu_secs}
-            </S.Number>
-            <S.Text>seg</S.Text>
-          </S.BoxNumber>
-        {/* </MediaQuery> */}
-
-      </S.Box>
+      <S.Section>
+        <S.Container>
+          <S.Column>
+            <S.Title>COMING SOON</S.Title>
+            <S.Box>
+              <S.BoxNumber>
+                <S.Number>
+                  {time.nu_hors}
+                  <S.Label diff={true}>:</S.Label>
+                </S.Number>
+                <S.Text>{time.labe_hors}</S.Text>
+              </S.BoxNumber>
+              <S.BoxNumber>
+                <S.Number>
+                  {time.nu_minu}
+                  <S.Label diff={true}>:</S.Label>
+                </S.Number>
+                <S.Text>{time.minu}</S.Text>
+              </S.BoxNumber>
+              <S.BoxNumber>
+                <S.Number>
+                  {time.nu_secs}
+                </S.Number>
+                <S.Text>{time.labe_secs}</S.Text>
+              </S.BoxNumber>
+            </S.Box>
+          </S.Column>
+          <S.Container>
+            <S.Image src={AssetCountdown} alt="Two builders building a house" />
+          </S.Container>
+        </S.Container>
+      </S.Section>
+      
     </>
   )
 };

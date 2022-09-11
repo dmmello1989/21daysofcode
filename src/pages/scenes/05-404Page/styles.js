@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import styled, { keyframes, css } from "styled-components";
-import BgDesktop from "../../../images/bg-404-page.gif";
+import styled from "styled-components";
+import BgDesktop from "../../../images/05-bg-404-page.gif";
 
 export const Section = styled.div`
   position: relative;
