@@ -42,8 +42,8 @@ const list = [
   {
     number: "07",
     image: "",
-    title: "Counter",
-    slug: "07-counter"
+    title: "Countdown",
+    slug: "07-Countdown"
   },
   {
     number: "08",

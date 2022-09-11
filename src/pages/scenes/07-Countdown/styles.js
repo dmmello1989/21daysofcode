@@ -1,48 +1,66 @@
 import styled from "styled-components";
 
 export const Section = styled.div`
-  
+  background-color: #ffffff;
 `;
 
 export const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
   width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 64px;
-  /* background-color: #ffffff; */
 `;
 
+export const Column = styled.div`
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &:first-child {
+    flex: 1;
+  }
+`;
+
+export const Title = styled.h1`
+  margin-bottom: 16px;
+  font-size: 2.75rem;
+  font-weight: 400;
+  font-family: Poppins;
+  color: var(--bg-calc-blue);
+
+  > strong {
+    font-weight: 900;
+  }
+`;
 
 export const Box = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 16px;
-
-  @media (max-width: 1199px) {
-    margin-left: 0;
-  }
 `
 
 export const BoxNumber = styled.span`
-  width: 56px;
   display: block;
-  text-align: center;
+  color: rgb(230, 69, 97);
 
   @media (max-width: 1199px) {
     display: flex;
     align-items: baseline;
-    width: 40px;
   }
 `;
 
 export const Number = styled.span`
-  color: #EB0207;
-  font-family: 'Rubik', sans-serif;
-  font-size: 1.75rem;
-  font-weight: 700;
   display: inline-flex;
   align-items: center;
+  font-size: 3.75rem;
+  font-weight: 400;
+  line-height: 60px;
 
   @media (max-width: 1199px) {
     margin-right: 2px;
@@ -55,7 +73,7 @@ export const Number = styled.span`
 export const Text = styled.span`
   display: block;
   font-size: 0.75rem;
-  color: #EB0207;
+  font-family: Poppins;
 
   @media (max-width: 1199px) {
     color: #EBE708;
@@ -65,10 +83,9 @@ export const Text = styled.span`
 
 export const Label = styled.span`
   display: inline-block;
-  color: #EB0207;
   font-size: 1.25rem;
   font-weight: 700;
-  margin-left: 2px;
+  margin: 0 8px;
 
   > span {
     display: block;
@@ -122,4 +139,8 @@ export const LabelEnd = styled.span`
       height: 40px;
     }
   }
+`;
+
+export const Image = styled.img`
+  width: 450px;
 `;

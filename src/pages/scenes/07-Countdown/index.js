@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { DetailsHeader } from "../../../components/DetailsHeader";
 import { Header } from "../../../components/Header";
-import AssetCountdown from "../../../images/07-asset-countdown.svg";
+// import AssetCountdown from "../../../images/07-asset-countdown.svg";
+import AssetCountdown from "../../../images/07-asset-countdown.jpg";
 
 import * as S from "./styles";
 
@@ -16,7 +17,7 @@ const initialState = {
   labe_secs: 'SEGUNDO'
 };
 
-export const Counter = ({ dateProps }) => {
+export const Countdown = ({ dateProps }) => {
   const [time, setTime] = useState(initialState);
   const [date, setDate] = useState(new Date(2022, 11, 31, 23, 59, 59));
 
@@ -70,13 +71,13 @@ export const Counter = ({ dateProps }) => {
       <Header returnLink="/projects" />
       <DetailsHeader
         day="7"
-        slug="07-Counter"
-        projectTitle="Counter"
+        slug="07-Countdown"
+        projectTitle="Countdown"
       />
       <S.Section>
         <S.Container>
           <S.Column>
-            <S.Title>COMING SOON</S.Title>
+            <S.Title>COMING <strong>SOON</strong></S.Title>
             <S.Box>
               <S.BoxNumber>
                 <S.Number>
@@ -90,7 +91,7 @@ export const Counter = ({ dateProps }) => {
                   {time.nu_minu}
                   <S.Label diff={true}>:</S.Label>
                 </S.Number>
-                <S.Text>{time.minu}</S.Text>
+                <S.Text>{time.labe_minu}</S.Text>
               </S.BoxNumber>
               <S.BoxNumber>
                 <S.Number>
@@ -100,9 +101,9 @@ export const Counter = ({ dateProps }) => {
               </S.BoxNumber>
             </S.Box>
           </S.Column>
-          <S.Container>
+          <S.Column>
             <S.Image src={AssetCountdown} alt="Two builders building a house" />
-          </S.Container>
+          </S.Column>
         </S.Container>
       </S.Section>
       
