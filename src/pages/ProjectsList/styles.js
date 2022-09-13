@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Section = styled.section`
   padding: 60px 0;
+  background-color: ${props => props.theme.colors.dark};
 `;
 
 export const Container = styled.div`
@@ -37,7 +38,7 @@ export const Title = styled.span`
   bottom: -64px;
   left: 50%;
   font-size: 2rem;
-  color: var(--clr-light);
+  color: ${props => props.theme.colors.light};
   font-family: var(--ff-secondary);
   transform: translateX(-50%);
   transition: all 0.4s;
@@ -86,7 +87,7 @@ export const Number = styled.div`
   font-size: 12rem;
   line-height: 140px;
   text-align: center;
-  color: var(--clr-accent);
+  color: ${props => props.theme.colors.accent};
   font-weight: var(--fw-black);
 `;
 

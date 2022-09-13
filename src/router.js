@@ -11,11 +11,12 @@ import { NotFound404 } from "./pages/scenes/05-404Page";
 import { Glassmorphism } from "./pages/scenes/06-Glassmorphism";
 import { AnimatedLoading } from "./pages/scenes/09-AnimatedLoading";
 import { Countdown } from "./pages/scenes/07-Countdown";
+import { DarkLightMode } from "./pages/scenes/08-DarkLightMode";
 
 const HOME_PATH = "/";
 const PROJECTS_PATH = "/projects";
 
-export const Router = () => {
+export const Router = ({ active, toggleDarkMode }) => {
   return (
     <Routes>
       <Route path={HOME_PATH} element={<Home />} />
@@ -34,7 +35,7 @@ export const Router = () => {
       <Route path={`${PROJECTS_PATH}/05-404-page`} element={<NotFound404 />} />
       <Route path={`${PROJECTS_PATH}/06-glassmorphism`} element={<Glassmorphism />} />
       <Route path={`${PROJECTS_PATH}/07-countdown`} element={<Countdown />} />
-      <Route path={`${PROJECTS_PATH}/08-dark-light-mode`} element={<Countdown />} />
+      <Route path={`${PROJECTS_PATH}/08-dark-light-mode`} element={<DarkLightMode toggleDarkMode={toggleDarkMode} active={active} />} />
       <Route path={`${PROJECTS_PATH}/09-animated-loading`} element={<AnimatedLoading />} />
       <Route path={`${PROJECTS_PATH}/10-particle-js`} element={<Countdown />} />
       <Route path={`${PROJECTS_PATH}/11-login-form`} element={<Countdown />} />

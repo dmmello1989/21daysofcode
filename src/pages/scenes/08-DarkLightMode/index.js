@@ -1,12 +1,8 @@
-import { useState } from "react";
 import { DetailsHeader } from "../../../components/DetailsHeader";
 import { Header } from "../../../components/Header";
-
 import * as S from "./styles";
 
-export const DarkLightMode = () => {
-  const [isClicked, setIsClicked] = useState(false);
-
+export const DarkLightMode = ({ active, toggleDarkMode }) => {
   return (
     <>
       <Header returnLink="/projects" />
@@ -17,9 +13,13 @@ export const DarkLightMode = () => {
       />
       <S.Section>
         <S.Container>
-          <S.Button isClicked={isClicked} onClick={() => setIsClicked(!isClicked)}>
-            <S.ButtonText>Click me!</S.ButtonText>
-          </S.Button>
+          <S.Title>Dark Mode</S.Title>
+          <S.Wrapper isActive={active} onMouseDown={e => e.preventDefault()} onClick={() => toggleDarkMode()}>
+            <S.Input type="checkbox" />
+            <S.Label isActive={active} className={active}>
+              <S.Circle isActive={active} />
+            </S.Label>
+          </S.Wrapper>
         </S.Container>
       </S.Section>
     </>
