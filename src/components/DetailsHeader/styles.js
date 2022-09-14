@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const Header = styled.div`
+  position: relative;
   background-color: ${props => props.theme.colors.dark};
+  z-index: 99;
 `;
 
 export const Container = styled.div`
