@@ -9,9 +9,10 @@ import { AnimatedButton } from "./pages/scenes/03-AnimatedButton";
 import { Calculator } from "./pages/scenes/04-Calculator";
 import { NotFound404 } from "./pages/scenes/05-404Page";
 import { Glassmorphism } from "./pages/scenes/06-Glassmorphism";
-import { AnimatedLoading } from "./pages/scenes/09-AnimatedLoading";
 import { Countdown } from "./pages/scenes/07-Countdown";
 import { DarkLightMode } from "./pages/scenes/08-DarkLightMode";
+import { AnimatedLoading } from "./pages/scenes/09-AnimatedLoading";
+import { ParticlesJs } from "./pages/scenes/10-Particles";
 
 const HOME_PATH = "/";
 const PROJECTS_PATH = "/projects";
@@ -37,7 +38,7 @@ export const Router = ({ active, toggleDarkMode }) => {
       <Route path={`${PROJECTS_PATH}/07-countdown`} element={<Countdown />} />
       <Route path={`${PROJECTS_PATH}/08-dark-light-mode`} element={<DarkLightMode toggleDarkMode={toggleDarkMode} active={active} />} />
       <Route path={`${PROJECTS_PATH}/09-animated-loading`} element={<AnimatedLoading />} />
-      <Route path={`${PROJECTS_PATH}/10-particle-js`} element={<Countdown />} />
+      <Route path={`${PROJECTS_PATH}/10-particle-js`} element={<ParticlesJs />} />
       <Route path={`${PROJECTS_PATH}/11-login-form`} element={<Countdown />} />
       <Route path={`${PROJECTS_PATH}/12-image-gallery`} element={<Countdown />} />
       <Route path={`${PROJECTS_PATH}/13-responsive-menu`} element={<Countdown />} />
