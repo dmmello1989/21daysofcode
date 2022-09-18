@@ -6,7 +6,7 @@ export const DetailsHeader = ({ day, slug, projectTitle }) => {
     <S.Header>
       <S.Container>
         <S.ProjectTitle>
-          <span>day <strong>{day}</strong></span> // {projectTitle}
+          <S.Day>day <strong>{day}</strong></S.Day> // {projectTitle}
         
           <S.GithubLink>
             github: 

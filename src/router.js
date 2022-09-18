@@ -13,6 +13,7 @@ import { Countdown } from "./pages/scenes/07-Countdown";
 import { DarkLightMode } from "./pages/scenes/08-DarkLightMode";
 import { AnimatedLoading } from "./pages/scenes/09-AnimatedLoading";
 import { ParticlesJs } from "./pages/scenes/10-Particles";
+import { LoginForm } from "./pages/scenes/11-LoginForm";
 import { ECommerce } from "./pages/scenes/15-E-commerce";
 
 const HOME_PATH = "/";
@@ -40,7 +41,7 @@ export const Router = ({ active, toggleDarkMode }) => {
       <Route path={`${PROJECTS_PATH}/08-dark-light-mode`} element={<DarkLightMode toggleDarkMode={toggleDarkMode} active={active} />} />
       <Route path={`${PROJECTS_PATH}/09-animated-loading`} element={<AnimatedLoading />} />
       <Route path={`${PROJECTS_PATH}/10-particle-js`} element={<ParticlesJs />} />
-      <Route path={`${PROJECTS_PATH}/11-login-form`} element={<Countdown />} />
+      <Route path={`${PROJECTS_PATH}/11-login-form`} element={<LoginForm />} />
       <Route path={`${PROJECTS_PATH}/12-image-gallery`} element={<Countdown />} />
       <Route path={`${PROJECTS_PATH}/13-responsive-menu`} element={<Countdown />} />
       <Route path={`${PROJECTS_PATH}/14-quiz`} element={<Countdown />} />

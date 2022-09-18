@@ -16,17 +16,18 @@ export const ProjectTitle = styled.div`
   font-size: var(--fs-h1);
   font-family: var(--ff-secondary);
   color: ${props => props.theme.colors.light};
+`;
 
-  > span {
-    font-size: 2rem;
-    font-weight: 700;
+export const Day = styled.span`
+  font-size: 2rem;
+  font-weight: 700;
 
-    > strong {
-      display: inline-block;
-      margin-left: 4px;
-      font-size: 4rem;
-      color: ${props => props.theme.colors.complimentary};
-    }
+  > strong {
+    display: inline-block;
+    margin-left: -10px;
+    font-size: 4rem;
+    line-height: 48px;
+    color: #E01639;
   }
 `;
 
