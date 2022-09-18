@@ -14,7 +14,8 @@ const darkTheme = {
     calcPink: "#f7c7ba",
 
 
-
+    ecomPink: "#F6E6FA",
+    ecomBlue: "#C8F1F4",
 
 
 

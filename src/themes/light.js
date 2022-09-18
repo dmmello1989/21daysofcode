@@ -13,6 +13,9 @@ const lightTheme = {
     calcBlue: "#85c7c7",
     calcPink: "#f7c7ba",
 
+    ecomPink: "#F6E6FA",
+    ecomBlue: "#C8F1F4",
+
 
     bgBtnDisabled: "#dddddd",
     colorBtnDisabled: "#FFFFFF",
