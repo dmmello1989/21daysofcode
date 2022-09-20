@@ -15,6 +15,7 @@ import { AnimatedLoading } from "./pages/scenes/09-AnimatedLoading";
 import { ParticlesJs } from "./pages/scenes/10-Particles";
 import { LoginForm } from "./pages/scenes/11-LoginForm";
 import { ECommerce } from "./pages/scenes/15-E-commerce";
+import { ImageGallery } from "./pages/scenes/12-ImageGallery";
 
 const HOME_PATH = "/";
 const PROJECTS_PATH = "/projects";
@@ -42,7 +43,7 @@ export const Router = ({ active, toggleDarkMode }) => {
       <Route path={`${PROJECTS_PATH}/09-animated-loading`} element={<AnimatedLoading />} />
       <Route path={`${PROJECTS_PATH}/10-particle-js`} element={<ParticlesJs />} />
       <Route path={`${PROJECTS_PATH}/11-login-form`} element={<LoginForm />} />
-      <Route path={`${PROJECTS_PATH}/12-image-gallery`} element={<Countdown />} />
+      <Route path={`${PROJECTS_PATH}/12-image-gallery`} element={<ImageGallery />} />
       <Route path={`${PROJECTS_PATH}/13-responsive-menu`} element={<Countdown />} />
       <Route path={`${PROJECTS_PATH}/14-quiz`} element={<Countdown />} />
       <Route path={`${PROJECTS_PATH}/15-lp-e-commerce`} element={<ECommerce />} />

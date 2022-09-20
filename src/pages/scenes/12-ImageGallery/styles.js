@@ -12,67 +12,51 @@ export const Container = styled.div`
   padding: 64px;
 `;
 
-export const Button = styled.button`
-  position: relative;
-  display: block;
-  width: 360px;
-  height: 100px;
-  margin: auto;
-  padding: 16px 32px;
-  border-radius: 70px;
-  border: 2px solid rgba(0,0,0,0.1);
-  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
-  background-color: transparent;
-  transition: all 0.4s;
-  cursor: pointer;
-
-  &:after {
-    content:" ";
-    position:absolute;
-    top: -8px;
-    left: -16px;
-    width:100%;
-    height:100%;
-    border-radius: 70px;
-    background-color: var(--clr-accent);
-    transition: all 0.3s;
-  }
-
-  &:hover:after{  
-    transform: translate(16px, 8px);
-  }
-
-  &:active {
-  }
-
-  &:active:after {
-    box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-  }
-
-  ${props => props.isClicked && `
-    &:after {
-      top: 0;
-      left: 0;
-      background: var(--clr-complimentary);
-    }
-    &:hover:after{  
-      transform: none;
-    }
-    &:active:after {
-      background-color: var(--clr-complimentaryMono);
-    }
-  `};
+export const Column = styled.div`
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ffffff;
+  max-width: calc(100% / 11);
 `;
 
-export const ButtonText = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  font-size: 3rem;
-  color: var(--clr-dark);
-  font-weight: var(--fw-bold);
-  font-family: var(--ff-secondary);
-  transform: translate(-50%, -50%);
-  z-index: 5;
+export const Logo = styled.img`
+  max-width: 100%;
+`;
+
+export const BottomWrapper = styled.div`
+  
+`;
+
+export const Inspired = styled.p`
+  
+`;
+
+export const ImageWrapper = styled.div`
+  
+`;
+
+export const Image = styled.img`
+  
+`;
+
+export const TextWrapper = styled.div`
+  padding: 32px 8px;
+  color: ${props => props.theme.colors.accent};
+  background-color: #000000;
+`;
+
+export const Strong = styled.span`
+  font-weight: 700;
+  font-size: 1.125rem;
+  font-family: var(--ff-primary);
+`;
+
+export const Divider = styled.div`
+  height: 4px;
+  width: 30px;
+  background-color: ${props => props.theme.colors.account};
+`;
+
+export const Text = styled.p`
+  
 `;
