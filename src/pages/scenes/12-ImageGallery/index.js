@@ -6,6 +6,13 @@ import Logo from "../../../images/12-image-gallery/logo-hound.webp";
 
 import * as S from "./styles";
 
+const columns = [
+  {
+    type: "text",
+    
+  }
+]
+
 export const ImageGallery = () => {
   const [isClicked, setIsClicked] = useState(false);
 
@@ -52,6 +59,11 @@ export const ImageGallery = () => {
                       Art is breathing and retreating after shores. Nothing of the beauty goes unoticed. From the beachy waves to the highest peak, art permeates everything.
                     </S.Text>
                   </S.TextWrapper>
+                )}
+                {columns.style === "image" && (
+                  <S.ImageWrapper>
+                    <S.Image src={} alt={} />
+                  </S.ImageWrapper>
                 )}
               </S.Column>
             )
