@@ -3,14 +3,22 @@ import { DetailsHeader } from "../../../components/DetailsHeader";
 import { Header } from "../../../components/Header";
 
 import Logo from "../../../images/12-image-gallery/logo-hound.webp";
+import Tree from "../../../images/12-image-gallery/tree.png";
+import Clouds from "../../../images/12-image-gallery/clouds.png";
 
 import * as S from "./styles";
 
 const columns = [
   {
-    type: "text",
-    
-  }
+    type: "image",
+    image: Tree,
+    alt: "A tree"
+  },
+  {
+    type: "image",
+    image: Clouds,
+    alt: "Some clouds"
+  },
 ]
 
 export const ImageGallery = () => {
@@ -48,10 +56,11 @@ export const ImageGallery = () => {
       <S.Section>
         <S.Container>
           <IntroColumn src={Logo} alt="" />
-          {[0,1,2,3,4,5,6,7,8,9].map((column, index) => {
+          {columns.map((column, index) => {
+            console.log(column)
             return (
-              <S.Column>
-                {column.style === "text" && (
+              <S.Column key={index}>
+                {column.type === "text" && (
                   <S.TextWrapper>
                     <S.Strong>Malomondo Photo Gran Prix </S.Strong>
                     <S.Divider />
@@ -60,9 +69,9 @@ export const ImageGallery = () => {
                     </S.Text>
                   </S.TextWrapper>
                 )}
-                {columns.style === "image" && (
+                {column.type === "image" && (
                   <S.ImageWrapper>
-                    <S.Image src={} alt={} />
+                    <S.Image src={column.image} alt={column.alt} />
                   </S.ImageWrapper>
                 )}
               </S.Column>

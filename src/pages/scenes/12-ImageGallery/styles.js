@@ -10,6 +10,7 @@ export const Container = styled.div`
   height: calc(100vh - 184px);
   margin: auto;
   padding: 64px;
+  background-color: var(--bg-calc-green);
 `;
 
 export const Column = styled.div`
@@ -27,7 +28,7 @@ export const BottomWrapper = styled.div`
   
 `;
 
-export const Inspired = styled.p`
+export const Inspired = styled.div`
   
 `;
 
@@ -36,7 +37,7 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Image = styled.img`
-  
+  filter: saturate(0%);
 `;
 
 export const TextWrapper = styled.div`
